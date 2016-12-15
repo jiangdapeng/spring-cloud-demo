@@ -1,0 +1,9 @@
+config-server/.idea/
+random-word/.idea/
+rank-data/.idea/
+service-server/.idea/
+
+*/target/
+*/.idea/
+
+.idea/

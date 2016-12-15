@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ux-eureka-random-word
+  cloud:
+    config:
+      uri: http://localhost:8888
