@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by JDP on 2016/12/15.
  */
 
-@FeignClient("ux-eureka-random-word")
+@FeignClient(value="ux-eureka-random-word", fallback = WordClientHystrix.class)
 public interface WordClient {
 
     @RequestMapping(method = RequestMethod.GET, value="/word")
