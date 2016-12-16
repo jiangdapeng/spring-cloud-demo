@@ -1,0 +1,21 @@
+import dao.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Created by JDP on 2016/12/16.
+ */
+
+@RestController
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping(value = "/user/cnt", method = RequestMethod.GET)
+    public Integer getUserCnt() {
+        return userService.getUserCnt();
+    }
+}
