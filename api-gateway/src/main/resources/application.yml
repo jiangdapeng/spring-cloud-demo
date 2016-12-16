@@ -1,0 +1,18 @@
+srping:
+  application:
+    name: api-gateway
+
+server:
+  port: 7777
+
+
+zuul:
+  routes:
+    api-random-word:
+      path: /random-word/**
+      serviceId: ux-eureka-random-word
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
